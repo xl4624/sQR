@@ -9,7 +9,7 @@ load_dotenv()
 scan_bp = Blueprint("scan", __name__)
 
 SAFE_BROWSING_API_KEY = os.getenv("API_KEY")
-print(SAFE_BROWSING_API_KEY)
+
 if not SAFE_BROWSING_API_KEY:
     raise ValueError("API_KEY is not set")
 SAFE_BROWSING_URL = (

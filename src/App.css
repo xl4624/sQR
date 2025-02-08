@@ -23,6 +23,13 @@
   color: white;
 }
 
+button {
+  font-size: 1.3rem;
+  border-radius: 0.4rem;
+  padding: 0.3rem 0.8rem;
+  border: 2px solid black;
+}
+
 table {
   border: 1px solid white;
   border-collapse: collapse;
@@ -57,7 +64,27 @@ footer.footer {
 }
 
 /* Video Styling */
+.video-container {
+  width: 90%;
+  height: 20rem;
+  background-color: black;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .scan-video {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 0.5rem;
 }

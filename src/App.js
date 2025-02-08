@@ -69,13 +69,17 @@ function App() {
       </header>
 
       <div className="App-header">
-        <video className="scan-video" ref={videoRef}></video>
-        <button onClick={startScanner}>
-          Start Scanner
-        </button>
-        <button onClick={stopScanner}>
-          Stop Scanner
-        </button>
+        <div className="video-container">
+          <video className="scan-video" ref={videoRef}></video>
+        </div>
+        <div className="buttons">
+          <button onClick={startScanner}>
+            Start Scanner
+          </button>
+          <button onClick={stopScanner}>
+            Stop Scanner
+          </button>
+        </div>
         {result && (
           <div>Scanned Result: {result}</div>
         )}

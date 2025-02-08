@@ -63,8 +63,13 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <video ref={videoRef}></video>
+
+      <header className="header">
+        <h1> Home </h1>
+      </header>
+
+      <div className="App-header">
+        <video className="scan-video" ref={videoRef}></video>
         <button onClick={startScanner}>
           Start Scanner
         </button>
@@ -89,7 +94,11 @@ function App() {
             </table>
           </div>
         )}
-      </header>
+      </div>
+
+      <footer className="footer">
+        <h2> Recent URLs </h2>
+      </footer>
     </div>
   );
 }

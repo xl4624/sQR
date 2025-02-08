@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -9,8 +14,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #F5F5DC;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,4 +31,33 @@ table {
 th, td {
   border: 1px solid white;
   padding: 5px;
+}
+
+/* Header */
+header.header {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
+
+/* Main */
+.App-header {
+  width: 100%;
+  flex-grow: 1;
+}
+
+/* Footer */
+footer.footer {
+  background-color: #003366;
+  padding: 10px;
+  width: 100%;
+  color: white;
+}
+
+/* Video Styling */
+.scan-video {
+  width: 100%;
+  height: auto;
 }

@@ -16,8 +16,15 @@
   ],
   "routes": [
     {
+      "src": "/api",
+      "dest": "api/api.py"
+    },
+    {
       "src": "/api/(.*)",
       "dest": "api/api.py"
+    },
+    {
+      "handle": "filesystem"
     },
     {
       "src": "/(.*)",

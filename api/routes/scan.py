@@ -22,10 +22,12 @@ def scan():
         return jsonify({"error": "URL is required"}), 400
     
     check_url_db = get_url(url)
+    print(check_url_db)
     if not check_url_db:
         result = check_url_safety(url)
         insert_url(url, result)
         return jsonify({"URL": url, "result": result})
+    ## subject, description, reports
     return jsonify({"URL": url, "result": check_url_db['result']})
 
 

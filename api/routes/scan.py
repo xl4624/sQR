@@ -1,4 +1,5 @@
 from flask import Blueprint, request, jsonify
+from models.db import insert_url, get_all_urls, get_url, update_url, delete_url
 import requests
 import os
 from dotenv import load_dotenv
@@ -19,8 +20,16 @@ def scan():
     url = data.get('URL')
     if not url:
         return jsonify({"error": "URL is required"}), 400
-    result = check_url_safety(url)
-    return jsonify({"URL": url, "result": result})
+    
+    check_url_db = get_url(url)
+    if not check_url_db:
+        result = check_url_safety(url)
+        insert_url(url, result)
+        return jsonify({"URL": url, "result": result})
+    return jsonify({"URL": url, "result": check_url_db['result']})
+
+
+    
     
     
 def check_url_safety(url):

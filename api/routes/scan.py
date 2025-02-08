@@ -1,5 +1,5 @@
 from flask import Blueprint, request, jsonify
-from models.db import insert_url, get_all_urls, get_url, update_url, delete_url
+from models.url_db import insert_url, get_all_urls, get_url, update_url, delete_url
 import requests
 import os
 from dotenv import load_dotenv
@@ -20,6 +20,9 @@ SAFE_BROWSING_URL = (
 
 @scan_bp.route("/scan", methods=["POST"])
 def scan():
+    """
+    This function takes URL from the body, scan the URL from safebrowsing and return a string either safe or risky 
+    """
     data = request.get_json()
     url = data.get("URL")
     if not url:

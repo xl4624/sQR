@@ -14,7 +14,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
-import App from './App';
+import App from './pages/App';
+import Result from './pages/Result';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,7 +23,7 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/about" element={<h1> ABOUT </h1>} />
+        <Route path="/result" element={<Result />} />
         <Route path="/contact" element={<h1> CONTACT </h1>} />
       </Routes>
     </Router>

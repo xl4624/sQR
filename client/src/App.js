@@ -1,22 +1,30 @@
+import React, { useEffect, useRef, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import QrScanner from 'qr-scanner';
 
 function App() {
+  const videoRef = useRef(null);
+
+  async function startScanner() {
+    const scanner = new QrScanner(
+      videoRef.current,
+      (result) => console.log('decoded qr code:', result),
+      {
+        returnDetailedScanResult: true,
+        highlightScanRegion: true,
+        highlightCodeOutline: true,
+      }
+    );
+    await scanner.start();
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <video ref={videoRef}></video>
+        <button onClick={startScanner}>
+          Start Scanner
+        </button>
       </header>
     </div>
   );

@@ -3,7 +3,7 @@
 sQR is a security-focused QR scanner that helps protect users from malicious QR codes by combining Google's Safe Browsing API with Twitter-like community notes powered by Google Gemini.
 
 ## Features
-* **Full URL Previwe**: See the complete destination URL before visiting.
+* **Full URL Preview**: See the complete destination URL before visiting.
 * **Safe Browsing Check**: Automatically verify against Google's database of unsafe websites.
 * **Community Safety Notes**: User-sumbmitted safety reports summarized by Google Gemini.
 
@@ -31,4 +31,4 @@ The application will be available at `http://localhost:3000/`
 
 ## License
 
-MIT Licesnse -- see [LICENSE](LICENSE)
+MIT Licensese - see [LICENSE](LICENSE)

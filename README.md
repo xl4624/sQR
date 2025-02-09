@@ -29,6 +29,8 @@ npm start
 
 The application will be available at `http://localhost:3000/`
 
+Here is the domain from GoDaddy: realsqr.us (we ran into SSL issues so you can't connect to the server)
+
 ## License
 
 MIT Licensese - see [LICENSE](LICENSE)

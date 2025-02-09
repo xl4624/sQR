@@ -47,7 +47,7 @@ Analyze these user reports about a potentially malicious URL.
 </Reports>
 
 <Task>
-Provide exactly 3 short bullet points (max 8 words each) identifying possible security threats, mention information from reports whenever applicable.
+Provide at most 3 short bullet points (max 8 words each) identifying possible security threats, make sure to either reference a report if applicable or point out typos and/or the fact that the URL starts with numbers.
 </Task>
 
 <Formatting>

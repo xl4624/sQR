@@ -80,20 +80,6 @@ function Result() {
             {getStatusDisplay().text}
           </div>
 
-          {/* Add disclaimer below status box if we are basing the status off of Safe Browsing */}
-          {!loading && !analysis && (
-            <div className="disclaimer">
-              *according to <a
-                href="https://developers.google.com/safe-browsing/v4"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="api-link"
-              >
-                Google's Safe Browsing API
-              </a>
-            </div>
-          )}
-
           <div className="other-data">
             <p>Scanned URL: {url}</p>
           </div>

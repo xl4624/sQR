@@ -56,6 +56,14 @@ header {
   color: #666;
 }
 
+.disclaimer {
+  font-size: 0.8rem;
+  color: #666;
+  text-align: center;
+  margin-top: 0px;
+  font-style: italic;
+}
+
 .other-data {
   margin-top: 1rem;
   text-align: left;
@@ -102,4 +110,32 @@ header {
   .action-button {
     width: 95%;
   }
+}
+
+.analysis-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.analysis-point {
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 8px;
+  padding: 12px;
+  border-radius: 6px;
+  border-left: 4px solid #dc2626;
+}
+
+.analysis-box {
+  background: #1a1f36;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px 0;
+  color: #fff;
+}
+
+.analysis-box h2 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
 }

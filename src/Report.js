@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import './Report.css';
 
@@ -22,9 +22,7 @@ function Report() {
     });
 
     if (response.ok) {
-      const params = new URLSearchParams({
-        url: url,
-      });
+      const params = new URLSearchParams({ url: url });
       navigate(`/result?${params}`);
     } else {
       alert('Failed to submit report. Please try again.');

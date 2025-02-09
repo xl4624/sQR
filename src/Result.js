@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import './Result.css';
 
+const SERVER_IP = process.env.REACT_APP_SERVER_IP
+
 function Result() {
   const [searchParams] = useSearchParams();
   const url = searchParams.get('url');
@@ -12,7 +14,7 @@ function Result() {
 
   useEffect(() => {
     async function scanUrl() {
-      const response = await fetch('http://localhost:5000/scan', {
+      const response = await fetch(`${SERVER_IP}/scan`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -28,7 +30,7 @@ function Result() {
 
     async function fetchAnalysis() {
       const params = new URLSearchParams({ url });
-      const response = await fetch(`http://localhost:5000/reports?${params}`);
+      const response = await fetch(`${SERVER_IP}/reports?${params}`);
       const data = await response.json();
       console.log("fetchAnalysis(): ", data);
       setAnalysis(data.analysis);

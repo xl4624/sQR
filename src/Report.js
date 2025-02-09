@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import './Report.css';
 
+const SERVER_IP = process.env.REACT_APP_SERVER_IP;
+
 function Report() {
   const [searchParams] = useSearchParams();
   const url = searchParams.get('url');
@@ -10,7 +12,7 @@ function Report() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:5000/reports', {
+    const response = await fetch(`${SERVER_IP}/reports`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

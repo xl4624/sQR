@@ -3,9 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import './App.css';
 import QrScanner from 'qr-scanner';
 
-// const SERVER_IP = process.env.REACT_APP_SERVER_IP;
-// const SERVER_IP = "http://localhost:5000";
-
 function App() {
   const videoRef = useRef(null);
   const [qrScanner, setQrScanner] = useState(null);

@@ -40,8 +40,7 @@ th, td {
   padding: 5px;
 }
 
-/* Header */
-header.header {
+header {
   background-color: #003366;
   color: white;
   text-align: center;
@@ -53,14 +52,6 @@ header.header {
 .App-header {
   width: 100%;
   flex-grow: 1;
-}
-
-/* Footer */
-footer.footer {
-  background-color: #003366;
-  padding: 10px;
-  width: 100%;
-  color: white;
 }
 
 /* Video Styling */
@@ -80,7 +71,6 @@ footer.footer {
   height: 100%;
 }
 
-/* Buttons */
 .buttons {
   display: flex;
   align-items: center;

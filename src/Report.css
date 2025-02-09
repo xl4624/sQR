@@ -1,0 +1,92 @@
+.report-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #F5F5DC;
+}
+
+header {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.home-link {
+  color: #66B2FF;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.report-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.report-box {
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input-group {
+  width: 100%;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #E0E0E0;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.input-group textarea {
+  height: 200px;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  outline: none;
+  background-color: #D3D3D3;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #808080;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #666666;
+}
+
+@media (max-width: 600px) {
+  .report-content {
+    padding: 1rem;
+  }
+
+  .report-box {
+    width: 95%;
+  }
+}

@@ -1,0 +1,101 @@
+.Result-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #F5F5DC;
+}
+
+header {
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.Result-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.result-box {
+  background-color: #E0E0E0;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.status-box {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.status-box.safe {
+  background-color: #00FF2F;
+  color: #006400;
+}
+
+.status-box.unsafe {
+  background-color: #FFB6C1;
+  color: #8B0000;
+}
+
+.status-box.loading {
+  background-color: #E0E0E0;
+  color: #666;
+}
+
+.other-data {
+  margin-top: 1rem;
+  text-align: left;
+  color: #333;
+}
+
+.action-button {
+  width: 90%;
+  max-width: 400px;
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background-color: #E0E0E0;
+  transition: background-color 0.2s;
+}
+
+.visit-button {
+  background-color: #E0E0E0;
+  color: #000;
+}
+
+.report-button {
+  background-color: #E0E0E0;
+  color: #FF0000;
+}
+
+.action-button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .result-content {
+    padding: 1rem;
+  }
+
+  .result-box {
+    width: 95%;
+  }
+
+  .action-button {
+    width: 95%;
+  }
+}

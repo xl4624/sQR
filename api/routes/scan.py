@@ -3,6 +3,7 @@ from models.url_db import insert_url, get_all_urls, get_url, update_url, delete_
 import requests
 import os
 from dotenv import load_dotenv
+import sys
 
 load_dotenv()
 
@@ -21,7 +22,7 @@ SAFE_BROWSING_URL = (
 @scan_bp.route("/scan", methods=["POST"])
 def scan():
     """
-    This function takes URL from the body, scan the URL from safebrowsing and return a string either safe or risky 
+    This function takes URL from the body, scan the URL from safebrowsing and return a string either safe or risky
     """
     data = request.get_json()
     url = data.get("URL")
@@ -57,4 +58,3 @@ def check_url_safety(url):
     response = requests.post(SAFE_BROWSING_URL, json=payload)
     data = response.json()
     return "safe" if "matches" not in data else "malicious"
-

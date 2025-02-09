@@ -1,6 +1,7 @@
 from flask import Flask
 from routes.scan import scan_bp
 from routes.auth import auth_bp
+from routes.report import reports_bp
 from routes.feedback import feedback_bp
 from flask_jwt_extended import JWTManager
 from flask_cors import CORS
@@ -18,6 +19,7 @@ app.config["JWT_SECRET_KEY"] = os.getenv("JWT_SECRET_KEY")
 jwt = JWTManager(app)
 
 app.register_blueprint(scan_bp)
+app.register_blueprint(reports_bp)
 app.register_blueprint(auth_bp, url_prefix="/auth")
 app.register_blueprint(feedback_bp, url_prefix="/feedback")
 

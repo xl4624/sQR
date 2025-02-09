@@ -29,6 +29,10 @@ button {
   padding: 0.4rem 0.9rem;
   border: 2px solid black;
 }
+button:active {
+  opacity: 0.8;
+  transform: scale(0.95);
+}
 
 table {
   border: 1px solid white;

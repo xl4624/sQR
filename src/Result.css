@@ -20,6 +20,8 @@ header {
   align-items: center;
   padding: 2rem;
   gap: 1rem;
+
+  justify-content: center;
 }
 
 .result-box {
@@ -70,6 +72,8 @@ header {
   cursor: pointer;
   background-color: #E0E0E0;
   transition: background-color 0.2s;
+
+  margin-top: 1rem;
 }
 
 .visit-button {

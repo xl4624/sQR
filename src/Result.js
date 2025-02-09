@@ -57,7 +57,7 @@ function Result() {
 
     return {
       className: result === 'safe' ? 'safe' : 'unsafe',
-      text: result === 'safe' ? 'Safe*' : 'Unsafe*'
+      text: result === 'safe' ? 'Safe!' : 'Unsafe!'
     };
   }
 

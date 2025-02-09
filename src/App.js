@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './App.css';
 import QrScanner from 'qr-scanner';
 
@@ -9,6 +10,7 @@ function App() {
   const videoRef = useRef(null);
   const [qrScanner, setQrScanner] = useState(null);
   const [prevUrl, setPrevUrl] = useState('');
+  const navigate = useNavigate();
 
   async function startScanner() {
     if (qrScanner) {
@@ -37,7 +39,7 @@ function App() {
     const params = new URLSearchParams({
       url: prevUrl,
     });
-    window.location.href = `/result?${params}`;
+    navigate(`/result?${params}`);
   }
 
   function stopScanner() {

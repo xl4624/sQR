@@ -22,7 +22,6 @@ function Result() {
 
         const data = await response.json();
         console.log('Scan result:', data);
-        // setResult("unsafe");
         setResult(data.result);
       } catch (error) {
         console.error('Error:', error);

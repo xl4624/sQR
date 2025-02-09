@@ -24,9 +24,9 @@
 }
 
 button {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   border-radius: 0.4rem;
-  padding: 0.3rem 0.8rem;
+  padding: 0.4rem 0.9rem;
   border: 2px solid black;
 }
 
@@ -57,7 +57,7 @@ header {
 /* Video Styling */
 .video-container {
   width: 90%;
-  height: 20rem;
+  height: 25rem;
   background-color: black;
   border-radius: 1rem;
   overflow: hidden;
@@ -76,5 +76,10 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 90%;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
+}
+
+.scan-button {
+  margin-top: 1rem;
+  width: 90%;
 }

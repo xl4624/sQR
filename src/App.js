@@ -58,13 +58,13 @@ function App() {
           <button onClick={startScanner}>
             Start Scanner
           </button>
-          <button onClick={scanQrCode}>
-            Scan QR Code
-          </button>
           <button onClick={stopScanner}>
             Stop Scanner
           </button>
         </div>
+        <button className="scan-button" onClick={scanQrCode}>
+            Scan QR Code
+        </button>
       </div>
     </div>
   );
